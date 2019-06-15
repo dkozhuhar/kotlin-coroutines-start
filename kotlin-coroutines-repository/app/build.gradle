@@ -54,16 +54,16 @@ dependencies {
 
     // ViewModel and LiveData
     def lifecycle_version = '2.0.0-beta01'
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0-alpha01"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01"
-    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+    androidTestImplementation "androidx.arch.core:core-testing:$lifecycle_version"
 
     // Room for database
-    def room_version = '2.0.0'
+    def room_version = '2.1.0'
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
-    def work_version = "2.0.1"
+    def work_version = "2.1.0-beta01"
     implementation "androidx.work:work-runtime:$work_version"
     implementation "androidx.work:work-runtime-ktx:$work_version"
     androidTestImplementation 'junit:junit:4.12'
