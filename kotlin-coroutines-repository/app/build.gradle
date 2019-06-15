@@ -63,15 +63,16 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
-    def work_version = "1.0.1"
-    implementation "android.arch.work:work-runtime:$work_version"
-
+    def work_version = "2.0.1"
+    implementation "androidx.work:work-runtime:$work_version"
+    implementation "androidx.work:work-runtime-ktx:$work_version"
     androidTestImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation "androidx.work:work-testing:2.1.0-beta01"
 
     androidTestImplementation ("com.google.truth:truth:0.45") {
         exclude group: "com.google.guava", module: "guava"
     }
-    androidTestImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+    androidTestImplementation "androidx.test:core:1.2.0"
 }
